@@ -9,8 +9,9 @@ class ContactMailer < ActionMailer::Base
   def sent(contact)
 
     @contact = contact
+    array = [@contact.email, "studymk.123.4@gmail.com"]
 
-    mail(to: @contact.email, subject: "Thank you for your contact!")
+    mail(to: array, subject: "Thank you for your contact!")
   end
 end
 
